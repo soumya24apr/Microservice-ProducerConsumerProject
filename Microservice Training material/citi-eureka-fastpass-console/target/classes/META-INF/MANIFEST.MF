@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: citi-eureka-fastpass-console
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: chanda
+Implementation-Vendor-Id: citi.demo
+Build-Jdk: 1.8.0_20
+Implementation-URL: http://projects.spring.io/spring-boot/citi-eureka-
+ fastpass-console/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
