@@ -1,0 +1,521 @@
+filter should reset on unchecking it after filter has been used. all inside checks should also get reset.
+
+on filter, when procedure name is filter on ecg .. n we clear filter it should also clear the message.
+
+java,spring,restful ws
+
+basic technical ques - exception, serialization, collection.
+years of experience - 
+HR will let you know regarding time or slot for interview drive.
+scheduled or not scheduled calls with interviwer ?? HR
+small technical discussion.
+this interview will help u getting ur access early.
+
+rejection criteria :
+10 out 6,
+c
+
+3000/1897/300
+
+
+How comfortable are you on Java vs Javascript?
+Did you create a new project using Maven or was it already configured?
+   91.            Which code repository did you use?
+.            Highlights of your resume?
+.            What areas do you want to learn more or explore?
+What happens in Left and right joins?
+Can you give an instance where there was a synchronization issue in your project and you resolved it?
+How to delete record from a table whose primary key is foreign key in other table?
+Which is the best project that you’ve worked on and why?
+   16.            Which is the worst project that you’ve worked on and why?
+   .            In Hashtable , what is synchronized, methods or object?
+What is Immutable object and how to make object immutable?
+       2.            Are Immutable objects thread-safe?
+.            Have you worked on garbage collector? How does it work?
+       6.            What is the difference between Hashmap vs Hashtable?
+================
+postman - http://localhost:8080/rest/db/sdd
+
+GIT helping point to revert to previous version ---------------------
+you can cmd into your code directory and run git commands there... git show-ref you can run there and it gets you the hashes for all the branch in the local repo
+just fyi
+
+Github Link - https://github.com/rohitghatol/spring-boot-microservices/tree/master/user-webservice
+https://github.com/TechPrimers/stock-price-viewer-microservices-part1/blob/master/db-service/src/main/java/com/techprimers/stock/dbservice/resource/DbServiceResource.java
+You tube Link - https://www.youtube.com/watch?v=rlS9eH5tEnY
+
+default maven link - https://github.com/apache/maven/blob/master/apache-maven/src/conf/settings.xml
+
+Interview Links 
+---------------------------
+
+Strings - 
+	https://www.journaldev.com/1321/java-string-interview-questions-and-answers
+	http://javaconceptoftheday.com/java-string-interview-questions-and-answers/
+	http://javaconceptoftheday.com/string-intern-java/
+	http://javaconceptoftheday.com/java-program-to-reverse-a-string/
+	
+Overriding -
+	http://javaconceptoftheday.com/java-interview-questions-on-method-overriding/
+	
+Advanced core Java for 6 years -
+	http://www.java67.com/2013/07/15-advanced-core-java-interview-questions-answers-senior-experienced-5-6-years-programmers-developers.html
+	https://dzone.com/articles/10-tricky-interview-questions-for-java-devs
+	https://www.codementor.io/savingfunda/20-java-interview-questions-and-answers-from-investment-banks-98ghl6frw
+	
+Collections - 
+	https://vitalflux.com/5-tricky-interview-questions-java-arraylist/
+	
+================
+Microservice
+
+assembly and deploy 
+scalabale and independent 
+
+Eureka Server - get registry - register - send heartbeat 
+
+Eureka Heartbeat - default timing is 30 sec and can be customised in bootstrap.properties file ( try making it work ) --health check example 
+
+Eureka client - register application instances 
+
+Spring cloud hystrix - library for enabling resilience in microservices - continuosly watching 
+supported design pattern - failover method -- it periodically send request to see if application is down.
+
+circuit breakers 
+
+---------------
+
+netflix has infra on aws - communicate via API
+zuul 
+eureka
+ribbon
+spring cloud - collection of tools from pivotal 
+Spring cloud acts as a scaffolding for microservices - includes netflix 00S
+
+smart wrapper in a way of different annotion
+---------------
+Questions
+
+How do u share data in microservices?
+soa were the services which would be provided to another component. It can be loosely coupled and independent of other component. So what is the difference od SOA & microservices?
+if i dont have ci/cd in my microservices would it be the same.
+multiple instance of that modules in microservices . how can we do it technically
+
+what is api gateway ? zuul
+Ribbon - load balancing in Client side
+
+when u say services are choreographed , how service 1 will interact to service 3 . as it structured as service 1 = service 2 = service 3= service 4
+
+When we talk about microservices, it means having many and many services, can i not use port and mention application with respect to instances - as it would be tough to get port for multiple application.
+
+Will i have multiple eureka server when we talk about production
+
+actuator - in eureka
+
+-=======================
+
+
+zero downtime scenario - for microservices
+
+service discovery - eureka
+dynamic routing  and load balancing - Ribbon
+Circuit breaker - hystrix
+monitoring - hystrix dashboard and turbine
+edge server - zuul
+
+
+batch script
+
+---------------------
+
+dev ops + microservices
+
+dev checkin code
+
+automated script which will create ec2 instances, docker containers , hosted on ms, 
+
+change in any microservices , how do u deploy the patch , without any delay
+
+---------------
+
+build ec2 and create network - 
+
+deploy the microservices from git 
+
+docker image for microservices -  thru script
+
+------------
+
+on premise -  
+
+------------
+
+On AWS,
+install sql server  - add
+
+lets insurance & patient appt service talk to each other -
+
+docker container - 4 
+list of VMs, wat we ned to install, next steps which includes infra setup. 
+
+Problem statement  ??  -- 
+
+=========================
+mysql
+- 
+load balancing - 
+----------------
+tcp/ip port - 3306
+
+-----------
+
+estimates - 
+
+mysql + current microservice
+test fallback - circuit breaker
+test how to create multiple instances using eureka
+integrate zuul to current microservice
+
+create docker image for current microservice
+
+------------------------
+ 
+mysql + db change - 5.7.23 mysql
+
+test how to create multiple instances using eureka - r&d
+
+--------------------
+test fallback - circuit breaker - fallback
+Load balancing - ribbon
+integrate zuul to current microservice - 
+
+---------------------
+create docker image for current microservice
+
+==========================
+spring.datasource.url=jdbc:sqlserver://localhost;databaseName=PatientAppointment
+spring.datasource.username=sa
+spring.datasource.password=password_123
+spring.datasource.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
+spring.jpa.show-sql=true
+spring.jpa.hibernate.dialect=org.hibernate.dialect.SQLServer2012Dialect
+spring.jpa.hibernate.ddl-auto = update
+eureka.client.serviceUrl.defaultZone=http://localhost:8085/eureka
+#eureka.instance.instanceId=:
+spring.application.name=PATIENT-APPT-SERVICE
+server.port=8083
+eureka.client.serviceUrl.defaultZone=http://localhost:8085/eureka
+-------------------------------------
+
+
+local machine setup
+trying to create cluster n run simple application
+
+---
+next week demo will show
+--------------------
+git lab 
+hystrix dashboard 
+------------
+
+demo
+--git lab code checkin - microservice ( ketan & Soumya)
+--create docker image of microservice and deploy it to docker (Sumit)
+-- Share docker image and help it to get deployed @ AWS. 
+
+========================
+
+For Update :
+
+http://localhost:8083/rest/db/updatePatientDetails?id=1&patientName=NewPatient
+
+To add :
+
+http://localhost:8083/rest/db/addNewPatient
+
+{
+ "id":2,
+ "patientName" : "Patient",
+ "doctorName" : "jonathan",
+ "hospital" : "cooper",
+ "checkUpType" : "urgent"
+}
+
+Body : raw
+Headers: Key - content-type 
+value : application/json
+
+To Delete :
+
+http://localhost:8083/rest/db/delete?id=1
+
+To get all Patient Records :
+http://localhost:8083/rest/db/getAllPatientDetails
+-----------------------------------------------
+http://localhost:8083/home
+
+http://localhost:8083/getPatientDetails
+========================================
+
+
+Java 8 Features Have you used Java 8 feature 
+Write code for Digital Clock Logic
+
+What is dependency Injection.
+Collection in java.
+What is difference between List and Set.
+What is difference between List & Arraylist, Set & Hashset.
+Difference between overload & override.
+What are the new features of java 8.
+Spring cloud, spring integration, spring batch.
+What is your roll in current project.
+Guidelines followed in code.
+==================
+package Java8;
+
+import java.util.Calendar;
+
+public class DigitalClock {
+	public static void main(String[] args) throws InterruptedException {
+		Calendar rightNow;
+		int hour, minute, second;
+		String time = "";
+		while (true) {
+			rightNow = Calendar.getInstance();
+			hour = rightNow.get(Calendar.HOUR);
+			minute = rightNow.get(Calendar.MINUTE);
+			second = rightNow.get(Calendar.SECOND);
+			time = (hour >= 10 ? hour : "0" + hour) + ":";
+			time += (minute >= 10 ? minute : "0" + minute) + ":";
+			time += (second >= 10 ? second : "0" + second);
+			System.out.print(time);
+			Thread.sleep(1000);
+			System.out.print("\b\b\b\b\b\b\b\b");
+		}
+	}
+}
+===================
+19,158.51 - citi card 
+ 5,000.00 - Didi
+ 8,405.37 - ICICI Card
+ 
+ -----------------
+ 
+ 10,000 - citi due
+ 13,000 - hospital
+  1,500 - 
+  5,000 - papa mummy n soumya delhi ticket
+--------
+ 29,500
+ 
+ 10,000 - flight ticket + train return
+ 10,000 - bankok
+  2,000 - airtel
+    500 - vodafone
+    750 - tata sky
+  3,000 - medicine
+  5,000 - physio
+ 
+ ------------------------
+ 
+ 12,000 - vaibhav
+  2,000 - icici
+ 15,000 - citi
+ ---------------
+ 
+ 
+ 65,000 - expenses 
+ 29,000 - have right now
+ 64,000 - salary expected
+ 
+ chakal@bankofbaroda.com
+ 
+===================
+ankita from bnp
+synechrp,
+
+hb A1c test - 3 month 
+fasting sugar
+pbc
+
+-----------------
+info@rvision  - mail for skype interview
+
+9015724103 - Dr Gaurav - dental
+ghanta ghar, left from and first right 
+
+372-sabdarganj hospital - 3rd floor - audiogram
+Deepak Gupta
+9910050321
+
+
+===============
+Alien Language
+Today, we are going to learn a new language. It looks like English, but you will not be able to recognize the words. For example:
+
+Java  Mdyd Python  Sbwkrq
+
+However, with some analysis, we are able to figure out that this language is nothing but English alphabets shifted by a certain offset. For example:
+
+J + 3 = M
+a + 3 = d
+v + 3 = y
+a + 3 = d
+
+Hence, Java  Mdyd.
+
+Similarly, Python  Sbwkrq.
+
+Your task is to create a AlienLanguageTranslator, which can translate English to this new language and vice versa. You are given a prototype LanguageTranslator which lists all functionality the AlienLanguageTranslator should provide.
+=====================
+214 mg/dl
+
+November@2018
+
+2) Interview on Friday - CE automation - GE Interview  - Friday 2:00 pm through webex / bridge
+	•	Core Java, Spring framework, Rest Webservices, design patterns
+	•	Have worked on Oracle DB (procedures, queries etc.) & Angular JS
+	•	Familiar with Maven
+	•	Design skills in applications
+	•	Should be able to conduct Technical reviews 
+	•	Should be able to propose multiple solutions for any requirement
+	•	Mentoring team members, if needed. And giving technical directions on day to day deliverables
+	•	Client Communication – Daily Status Updates
+3) check in code for both of the story - pending today
+4) Appraisal meeting
+
+
+spring - aop
+spring boot
+maven building
+scenario based java ques 
+serialization
+transfer data over network
+aws - deploy springboot
+scenario - webserver ,application server
+
+----------------------
+5) MOBILEWARE - THURSDAY 12:00 , SEND SKYPE ID 
+	Technologies: Java 1.6+, Tomcat/JBoss/Weblogic, JSP, JSF, JPA, JavaScript, JSON, Web service development
+					• Framework: struts 2 or spring
+					• Server: Tomcat or JBoss or equivalent
+					• IDE: Eclipse
+					• Good to have: AJAX, JQuery, XML/SOAP, HTML 5.0, CSS3
+					
+6) SYNECHRON - THURSDAY 3:30 ( MALAD /GOREGOAN) - HEADS N MINDS CONSULTANT
+	SKILLS REQUIRED   :-
+	• PASSION FOR  JAVA DEVELOPMENT
+	• STRONG PROBLEM SOLVING SKILLS AND AN ABILITY TO LEARN RAPIDLY
+	• CORE JAVA, ANGULAR JS ( MANDATORY)
+	• SPRING, JUNIT, HIBERNATE, DESIGN PATTERNS, XML, SOAP, XSD        
+	• RELATIONAL DATABASES (PREFERABLY SYBASE OR DB2)
+------------------------
+7) Oracle - 4:00 Friday - Telephonic screening.
+
+-------------------------
+	hashmap , ArrayList,hashset- Collection
+	interface,  - Inheritance
+	static , final - 
+	Data encapsulation and abstraction
+	overloading and overriding - Polymorphism
+	composition
+	String 
+	concurrent collection
+
+	spring rest WS
+	Spring JPA	
+
+	Angular JS - Filters, directives, basics
+
+	Design pattern 2 example
+
+	SQL - Joins and Procedures
+	
+	springboot and Microservices - tricky questions
+----------------------------	
+	mobileware 
+	
+	Q) how do u use a asyncronous call(paytm) with synchronous call (vodafone) response to tell it.
+	if you have paytm as asyncronous call , how will u keep checking if status have been change for transaction and u ll update it to vodafone(synchronous call).
+	HashMap - in-memory caching - multi-threaded environment ...
+	Database polling
+	
+	Q) Application A- failed , B- success, C- ??
+	how do u tell the final response . how will u build this application?
+	Will you u database or something else
+--------------------------------	
+	
+	
+
+satyajeet kanikar- co founder n director - mobileware 5:30 call friday
+
+=====================
+tech talk
+project audits
+over commit your work - timeline 
+complete 
+Consious call
+------------
+healthcare / IT certification (target)
+------
+cloud 
+UI tech
+----
+java 9
+microservices - hands on explosure
+--------------------------
+4.25 - rating (10 -15%) - TL
+--------
+ESAT - 4/5
+------
+GOAL setting :  
+complex stories
+
+----------
+13040
+ 8800
+ 1471
+ 5883
+   50
+-----
+29,244
+38000
+--------
+8756   
+
+-----------
+38627 - citi
+10000 - icici
+20000 - papa
+10000 - personal
+5000 - saving
+5000 - misc
+-----------
+88,627 - expenses
+
+16000(ICICI) + 3000 (citi)
+
+64000
+19000
+-----
+93000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
